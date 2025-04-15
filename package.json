@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --quiet-deps styles/sass/main.scss styles/sass/main.css",
-    "sass:watch": "sass --quiet-deps --watch styles/sass/main.scss:styles/sass/main.css"
+    "sass": "sass --quiet --quiet-deps styles/sass/main.scss styles/sass/main.css",
+    "sass:watch": "sass --quiet --quiet-deps --watch styles/sass/main.scss:styles/sass/main.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.62.1"
+    "sass": "^1.86.3"
   },
   "dependencies": {
     "bootstrap": "^5.3.5"
