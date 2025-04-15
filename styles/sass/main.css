@@ -12067,7 +12067,7 @@ p {
 
 @font-face {
   font-family: "Lexend Regular";
-  src: url("../../../fonts/Lexend/static/Lexend-Regular.ttf") format("truetype");
+  src: url("./../../../fonts/Lexend/static/Lexend-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lexend Light";
