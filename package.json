@@ -1,0 +1,20 @@
+{
+  "name": "onexchain-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass styles/sass/main.scss styles/sass/main.css",
+    "sass:watch": "sass --watch styles/sass/main.scss:styles/sass/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}

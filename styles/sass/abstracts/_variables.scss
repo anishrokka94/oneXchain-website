@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// ---------- primary colors -------------
+$primary-p0: #041737;
+$primary-p1: #072E6E;
+$primary-p2: #0B45A5;
+$primary-p3: #2E78F1;
+$primary-p4: #97BBF8;
+$primary-p5: #E1EBFC;
+
+// --------- neutral colors ---------------
+$neutral-n0: #000000;
+$neutral-n1: #3B3B4F;
+$neutral-n2: #858599;
+$neutral-n3: #CBCBD8;
+$neutral-n4: #F4F4F6;
+$neutral-n5: #ffffff;
+
+// ------------ success colors -----------
+$success-s1: #3B773E;
+$success-s2:  #48B14E;
+$success-s3: #E0FAE6;
+
+// ----------- warning colors ------------
+$warning-w1: #BD610F;
+$warning-w2: #F9A153;
+$warning-w3: #FBEEDA;
+
+// ----------- danger colors -------------
+$danger-d1: #DE3715;
+$danger-d2: #FA6E52;
+$danger-d3: #FADFD9;
+
+$base-color: #FCFBF8;
+
+
+// --------- Font family ------------------
+$brand-font-regular: "Lexend Regular";
+$brand-font-light: "Lexend Light";
+$brand-font-medium: "Lexend Medium";
+$brand-font-semibold: "Lexend SemiBold";
+$brand-font-bold: "Lexend Bold";
+
+// $secondary-font-medium: "Inconsolata Medium";
+
+// --------- Headings ---------------
+$brand-heading-lg: 56px;  /* h1*/
+$brand-heading-md: 40px; /* h2 */
+$brand-heading-sm: 22px; /* h3 */
+$brand-heading-xs: 20px; /* h4 */
+$brand-heading-xxs: 14px; /* h5 */
+
+$base-font: 16px; /* p */
+$base-font-sm: 14px;
+
+$brand-body-b1: 18px;
+$brand-body-b2: 20px;
+
+
+
+
+/// shadow
+$shadow-1: 0px 4px 16px 0 rgba(0, 0, 0, .1);
+$shadow-2: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+$shadow-4: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+$shadow-6: 0px 6px 20px 0px rgba(0, 0, 0, 0.10);
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+

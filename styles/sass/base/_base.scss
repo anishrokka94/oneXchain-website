@@ -1,0 +1,82 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+
+ body {
+  font-family: $brand-font-regular;
+
+  background: $base-color;
+  // color: $neutral-n1;
+
+ }
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  // color: $neutral-n1;
+  color: #0B2330;
+}
+
+h1 {
+  font-family: $brand-font-semibold!important;
+  font-size:$brand-heading-lg;
+  line-height: 60px;
+}
+
+h2 {
+  font-family: $brand-font-semibold!important;
+  font-size:$brand-heading-md;
+  line-height: 32px;
+}
+
+// h3 {
+//   font-family: $brand-font-regular!important;
+//   font-size:$brand-heading-sm;
+//   line-height: 32px;
+// }
+
+h4 {
+  font-family: $brand-font-medium!important;
+  font-size:$brand-heading-xs;
+  line-height: 22px;
+}
+
+h5 {
+  font-family: $brand-font-medium;
+  font-size: $brand-heading-xxs;
+  line-height: 12px;
+}
+
+p {
+  font-family: $brand-font-light;
+  line-height: 32px;
+}
+
+.bg-brand {
+  background: $base-color;
+}
+
+.shadow-1 {
+  box-shadow: $shadow-1;
+}
+
+.section-p-y {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}

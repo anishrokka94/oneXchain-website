@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+.headline {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.reveal-word {
+display: inline-block;
+opacity: 0;
+}
+
+[data-aos="custom-fade-up"] {
+opacity: 0;
+transform: translateY(30px); /* much smoother */
+transition-property: opacity, transform;
+}
+
+[data-aos="custom-fade-up"].aos-animate {
+opacity: 1;
+transform: translateY(0);
+}

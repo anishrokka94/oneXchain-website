@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneXChain</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="/styles/sass/main.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand me-5" href="#">
+            <!-- logo svg -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="72"
+              height="48"
+              viewBox="0 0 72 48"
+              fill="none"
+            >
+              <rect width="72" height="48" fill="url(#pattern0_1053_4511)" />
+              <defs>
+                <pattern
+                  id="pattern0_1053_4511"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1053_4511"
+                    transform="scale(0.00833333 0.0125)"
+                  />
+                </pattern>
+                <image
+                  id="image0_1053_4511"
+                  width="120"
+                  height="80"
+                  preserveAspectRatio="none"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAKiklEQVR4nO2de4zcxB3Hv2dnnd0cKsk2gRZUiiAqlApbFCFB16WEqhxSs0t5pTzsUN60f/Ql7Q7PQBLRMrcqpSoqf7SBIjsolFSC3b6O0PCojWhLpXpICa+G0BIiClx4HbvYZ1//sDfn8+3e5XKJnfj8kVbaef7G/q5nfjP2jvuQICWRO1QW+UUxmnyP6s4uouQKRBU+6pK+pjgwcms4Yniofx2AKyL5dhYHRo4IRxAlt5iowlvRCqlmr6K6s3bWLd9L5iVlGABkkf8eUYXVMZqkVHeuj9Fe4nBJNyBj/5IJnHIygVNOJnDKSdTJMpj7CDT7tRhNbonR1gFBogKbzLNM5llJtiHtZF10yskETjmZwCkn0TGYKLlziCp8I0aTfygOjDwUo73ESVRgABKAb8Vo700Ac0rgrItOOZnAKScTOOVkAqecRJ0sqjtrqO6sSbINaSe7glNOJnDKyQROOYmOwSWRO1YW+aUxmnyV6s5LMdpLnKQfurs0e+hu/5J10SknEzjlZAKnnEzglJP0Q3frodl/jdHkqzHaOiDoS7oBSVASOcgin4/GG8wdNZk3Go4jSi4HgI9kHaO68/He1hkniQrcax5sMHezyTwnHEeU3DIAQiTrDqo7WyL5lgI4tkudm0zmefug2QcVB+Y8WLMXm8x7JxxFVOEBAJ+K5LyX6s6VkXwqgFVd6lxgMq81PNR/NoCvzLbtewrV7E1UdzbHZS9K0o/sJMEyALUY7X0EIDGBMy865WQCp5xM4JSTCZxy5pyTVRwYIQBI0u2Ii+wKTjmZwCknEzjlzLkxmCi5RQAOjcuewdxdJvPei8telLknsCpcjzhXsjR7lcm8xDZCy7rolJMJnHIygVNOJnDKmXNOFtXsTfBv4cWCwdwn47LVjbknsO48BuCxpNsRF1kXnXIygVNOJnDKmXNj8PBQfxnAmXHZo5r9R6o7j8ZlL8qcExiADOD7MdobBpCYwFkXnXIygVNOJnDKyQROOUk7WRaAX3eJ/7hL3IOYfKPe7JLvnz3qHAXm3kN3c/LfhXOJTOBpKIkcJ4v8cUHwA6o7r+9ne/NlkT8mCA5T3XlzNvUdNAIHJ/oTnbDB3JbJvG5debhMThb5/lCZj0zm2TOxS5TcQqIKu4Jgozgwcs6MGj5DiJL7IlGFfwTBu4oDIz+YTX1Jj8EzgSOq8CCAswCAAP8pV1unmszb2S1zSeTmN+uFPwMoBVHbjGrrVACTXiCZZg4agU3mjZarrRXNesEE8AUARzXrhUfK1dYZJvMm3N8tiRya9cJ9GBd3F9Xsr5vMO+DFNZi7DZq9IgjOetO2g0ZgADCZ91652lrerBeeAXA4gFOa9YJWrrYuMJk31slHFGEtgIuDoG1Y7vlUd15Ios0zxWTeuybz9tlrByYJTJTcifCvkFwkyQXwusFcI7wVQknklsgi/9Uu+TtldhrMfcZkXqtbA4iSOwLAqQD6I0ljAN4xmPuUybyRTqTJvO2G5VZkiX8CQAHAeUQRaKXWrgFAYzB/mSzxN3XqMCz32kqt/XgXu5+H/86Ibu0GELyZLUJwvGdHoj0AO4JzM2k/DqLkSgCOicYDcAAwqjvPh+pfJIv88iC4lerOs0EdZwD4TI+mfgjgOao7r0QTdjtZJZErNuuFDQC+1qOSDi+Uq62KybyXAWB4qJ8BOHGaMu8alruW6vadJhvfJqMxmL9FlvhbMMVJBjBsWO4VlVp7wsluDOYvlCV+A/zFmjHDcq8D8KIs8Y8i2MvDsNwfVWrtm8LlgrH5PgAXYRonk2r2CQB2hp0sqtl1ogp/6VFku2G5Kyu19oT04aH+9QAumcJUs1xtXWoy74NuThZRcucTVdg4VVvhXxBPUM2+Jiz07pWsZr1wL6YXFwCOb9YLD5dErlP2c3tQZqEs8T9p1gv1TkRjMH+uLPFrMLW4AFCUJf5BouQm2KnU2g8ZlntzEOyTJf5uWeIfxvhGLRuobk8QFwCIIqyG333vjxnE0bLEN0oit2SG5crNeuHuKdL35Bz3AVhGVOFpouSO7kTOAwCi5A4HUA7i3jAs9w6TudEudR5RhWsAnATgBFnkZZN5T4XSX6GaTSNlOKIKJwO4Ev5WRD8kSu5+qjtbZIm/OshjG5Z7ncncSS+pLIn8MlnibwYwn6jCJVR3bgunV2rtHw8P9S+F/wr2HICFQZJZrrYuD/cWfn1cX8ju+4blrjaZ+36XkwUAMJi7Uxb5aNzL0OyrI1k5ogrnARgAsFAW+QtM5t3TSaSafTuAdV1MLCCqUAdwPICLiJK7tldbdtu33J+azH0+HFcS+UNlib8qqGcJUQVKdeebwPgYfBTGr+YNlVr75z3q/5iowr3B92MAhAX+H9WdX0ULUN1BYzD/mizxtwPgSiJfAZwtAD4bZGGVWvu+bsaIgqeD8bQPwKe75aGa/d3g5HbEHaOafa3JvHY0ryzyRQDFILi5Umvf2eM4w2UWhsMm8940mTfpOAE8T1RhAACIKhxJdX8XqOBqPp2owpGI7LdFNXujYbnrZYlfC7/n6XqME+27f5r8AIGDksita9YLLwI4DMDyksjNM5k32hGYn5C7N2EHIro52FSNejgQGLLEd4Tt/KBGSyKXl0X+mmg5ogqnI+hKDcvdGk0viRyIKvwC4+ICQB9RhV8azD2zi8jhNu/rzcnC9XEA0BjMy7LENwAs6lHmZZO5rizxE8rtDSbz3gXwJIALASyQRf4wk3lvxDVNCq84TRpzZZE/hKjCz6Yo/xbVbT0aSRRhFYCVQdAGMAL/ZJ7WrBfuL1dbF4WnT3FSErl5ssQ/gN7i7g8mneeDYR7MqGavNJn3djiyMZi/RJb424LgmGG534HvRT8GYD6AFUQR/l2ptW+Mub0AAFnkv4RgWmNY7jqTubci0jsazH1fFvlZLUVOR0fgsEN1WK/MJZH/ZCg45TrwHtApvwj+StNJkfQx+Ivt/40WbAzmS7LEr8N49z1YqbXXBWlXyhKvwfesr28M5l+p1NodvyG84rV4lu2fjvCw8TjVnR3dMhFFKIaCbezj/y7PAwCDuS8Rf7J8CIDLhof6j8dE0Tt5Twm+jwF4dpa2LfgLDccRVdgEYFsk/e3iwMik7feJkjs2mA51Nv7cSHX7hk56pdZe3xjMLw2u7j5Z4u9pDOa3V2rtzVR3PiSqsA2+g3jG8FD/swB6/jmbavblAHp62dPwHPzz1CdL/F3DQ/1nYbJ/swDAucH3HQZzd8gif/he2usKBwAm81qG5a4JxZ0G/9HS8Od0+CtHAHD/bJf+qGbfAeCDILgM/lQq/FkRLVMSuSJRhd9j/Or7W7naWhkdZ6lurwagBUFBlviNwcoVDMu9Af7KEwCc3OU4w5/o6tqeH5/uvAqg420vhu8rRI/xYgQ/VMNyb41O6/YFu722Sq1dNyz3KgD/QncP0wWwzbDcG8vVVnQeOGOo7mylmv1lAEPYgz+DlUROaNYLvwXQuTf7WrnaOqfbEqjJPJSrravge5UAsIiowu9KIrekUmv/xrDc8wD8Hb5jtt8oV1vfNiz3RgDbMf6jCjMKYKthuZd1hph9zUFzPzhj78gETjmZwCknEzjl/B+FJ8EE7bXLzAAAAABJRU5ErkJggg=="
+                />
+              </defs>
+            </svg>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Market</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Trade
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> P2P</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Launch pad</a>
+              </li>
+            </ul>
+
+            <div class="d-flex gap-4">
+              <div class="d-flex gap-3">
+                <button class="btn btn-outline-dark" type="submit">
+                  Login
+                </button>
+                <button class="btn btn-primary" type="submit">Register</button>
+              </div>
+
+              <div class="d-flex gap-2 align-items-center">
+                <div class="pe-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2"
+                    height="40"
+                    viewBox="0 0 2 40"
+                    fill="none"
+                  >
+                    <rect width="2" height="40" fill="#0B2330" />
+                  </svg>
+                </div>
+
+                <a href="" class="px-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.86812 11.0909H7.50008C7.70391 8.57892 8.54464 6.16766 9.93246 4.08166C6.69892 4.92361 4.24364 7.69385 3.86812 11.0909ZM12 4.31891C10.4821 6.27449 9.55344 8.62439 9.32508 11.0909H14.6749C14.4466 8.62439 13.5179 6.27449 12 4.31891ZM14.6749 12.9091C14.4466 15.3756 13.5179 17.7255 12 19.6811C10.4821 17.7255 9.55344 15.3756 9.32508 12.9091H14.6749ZM7.50008 12.9091H3.86812C4.24364 16.3061 6.69892 19.0764 9.93246 19.9183C8.54464 17.8323 7.70391 15.4211 7.50008 12.9091ZM14.0675 19.9183C15.4554 17.8323 16.2961 15.4211 16.4999 12.9091H20.1319C19.7564 16.3061 17.3011 19.0764 14.0675 19.9183ZM20.1319 11.0909H16.4999C16.2961 8.57892 15.4554 6.16766 14.0675 4.08166C17.3011 4.92361 19.7564 7.69385 20.1319 11.0909ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                      fill="#0B2330"
+                    />
+                  </svg>
+                </a>
+
+                <a href="" class="px-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.0021 3.66821C11.7811 3.66821 11.5692 3.75599 11.4129 3.91224C11.2567 4.06849 11.1689 4.28041 11.1689 4.50138V4.64635C11.1672 5.07694 11.0396 5.49764 10.8018 5.85665C10.5641 6.21566 10.2265 6.49731 9.83074 6.66693C9.76029 6.69713 9.68617 6.71739 9.61051 6.72728C9.25088 6.85321 8.86374 6.88426 8.48688 6.81592C8.05279 6.73722 7.65224 6.53028 7.33687 6.22179L7.3303 6.21536L7.28034 6.16533C7.20296 6.08787 7.11074 6.02608 7.0096 5.98416C6.90845 5.94223 6.80003 5.92064 6.69054 5.92064C6.58105 5.92064 6.47263 5.94223 6.37148 5.98416C6.27034 6.02608 6.17845 6.08754 6.10107 6.16501L6.10041 6.16566C6.02294 6.24304 5.96149 6.33493 5.91956 6.43608C5.87763 6.53722 5.85605 6.64564 5.85605 6.75514C5.85605 6.86463 5.87763 6.97305 5.91956 7.07419C5.96149 7.17534 6.02294 7.26723 6.10041 7.34461L6.15723 7.40143C6.46572 7.7168 6.67262 8.11739 6.75133 8.55147C6.82847 8.97692 6.77897 9.41545 6.60926 9.81272C6.45466 10.2181 6.18395 10.5692 5.83074 10.8218C5.47039 11.0795 5.04083 11.2229 4.59791 11.2332L4.57843 11.2335H4.50344C4.28247 11.2335 4.07055 11.3213 3.9143 11.4775C3.75805 11.6338 3.67027 11.8457 3.67027 12.0667C3.67027 12.2876 3.75805 12.4995 3.9143 12.6558C4.07055 12.8121 4.28247 12.8998 4.50344 12.8998H4.64841C5.079 12.9016 5.4997 13.0291 5.85871 13.2669C6.21647 13.5038 6.49741 13.8399 6.66722 14.2339C6.84391 14.6364 6.89643 15.0826 6.81798 15.5152C6.73928 15.9493 6.53234 16.3498 6.22385 16.6652L6.21742 16.6718L6.16739 16.7217C6.08993 16.7991 6.02815 16.8913 5.98622 16.9925C5.94429 17.0936 5.9227 17.202 5.9227 17.3115C5.9227 17.421 5.94429 17.5294 5.98622 17.6306C6.02815 17.7317 6.0896 17.8236 6.16707 17.901L6.16772 17.9016C6.2451 17.9791 6.33699 18.0406 6.43814 18.0825C6.53928 18.1244 6.6477 18.146 6.75719 18.146C6.86669 18.146 6.97511 18.1244 7.07625 18.0825C7.1774 18.0406 7.26929 17.9791 7.34667 17.9017L7.40349 17.8448C7.71886 17.5363 8.11945 17.3294 8.55353 17.2507C8.97897 17.1736 9.4175 17.2231 9.81477 17.3928C10.2202 17.5474 10.5712 17.8181 10.8238 18.1713C11.0816 18.5317 11.2249 18.9612 11.2353 19.4041L11.2355 19.4236V19.4986C11.2355 19.7196 11.3233 19.9315 11.4796 20.0878C11.6358 20.244 11.8477 20.3318 12.0687 20.3318C12.2897 20.3318 12.5016 20.244 12.6579 20.0878C12.8141 19.9315 12.9019 19.7196 12.9019 19.4986V19.357L12.9019 19.3537C12.9036 18.9231 13.0312 18.5024 13.269 18.1434C13.5059 17.7856 13.842 17.5046 14.236 17.3348C14.6385 17.1581 15.0847 17.1056 15.5172 17.1841C15.9513 17.2628 16.3519 17.4697 16.6673 17.7782L16.6738 17.7846L16.7238 17.8347C16.8012 17.9121 16.8934 17.9739 16.9945 18.0158C17.0957 18.0578 17.2041 18.0794 17.3136 18.0794C17.4231 18.0794 17.5315 18.0578 17.6326 18.0158C17.7338 17.9739 17.8257 17.9125 17.9031 17.835L17.9037 17.8343C17.9812 17.757 18.0426 17.6651 18.0846 17.5639C18.1265 17.4628 18.1481 17.3544 18.1481 17.2449C18.1481 17.1354 18.1265 17.027 18.0846 16.9258C18.0426 16.8247 17.9812 16.7328 17.9037 16.6554L17.8469 16.5986C17.5384 16.2832 17.3315 15.8826 17.2528 15.4485C17.1744 15.0159 17.2269 14.5698 17.4035 14.1673C17.5733 13.7733 17.8543 13.4372 18.2121 13.2002C18.5711 12.9625 18.9918 12.8349 19.4224 12.8332L19.4257 12.8332L19.5007 12.8332C19.7216 12.8332 19.9336 12.7454 20.0898 12.5891C20.2461 12.4329 20.3339 12.221 20.3339 12C20.3339 11.779 20.2461 11.5671 20.0898 11.4109C19.9336 11.2546 19.7216 11.1668 19.5007 11.1668H19.359L19.3557 11.1668C18.9251 11.1651 18.5044 11.0375 18.1454 10.7998C17.7864 10.562 17.5048 10.2245 17.3351 9.82868C17.3049 9.75823 17.2847 9.68411 17.2748 9.60845C17.1488 9.24882 17.1178 8.86168 17.1861 8.48482C17.2648 8.05073 17.4718 7.65018 17.7803 7.33481L17.7867 7.32824L17.8367 7.27829C17.9142 7.2009 17.976 7.10868 18.0179 7.00754C18.0598 6.90639 18.0814 6.79797 18.0814 6.68848C18.0814 6.57899 18.0598 6.47057 18.0179 6.36942C17.976 6.26828 17.9145 6.17639 17.8371 6.09901L17.8364 6.09835C17.759 6.02088 17.6671 5.95943 17.566 5.9175C17.4648 5.87557 17.3564 5.85399 17.2469 5.85399C17.1374 5.85399 17.029 5.87557 16.9279 5.9175C16.8267 5.95943 16.7348 6.02089 16.6574 6.09835L16.6006 6.15517C16.2853 6.46366 15.8847 6.67056 15.4506 6.74927C15.018 6.82771 14.5718 6.7752 14.1693 6.59851C13.7753 6.4287 13.4392 6.14775 13.2023 5.78999C12.9646 5.43098 12.837 5.01029 12.8352 4.57969L12.8352 4.57637V4.50138C12.8352 4.28041 12.7475 4.06849 12.5912 3.91224C12.435 3.75599 12.223 3.66821 12.0021 3.66821ZM10.2346 2.73394C10.7034 2.26519 11.3391 2.00185 12.0021 2.00185C12.665 2.00185 13.3007 2.26519 13.7695 2.73394C14.2383 3.2027 14.5016 3.83847 14.5016 4.50138V4.57429C14.5023 4.67947 14.5335 4.7822 14.5916 4.86991C14.6499 4.95797 14.7327 5.02706 14.8298 5.06866L14.838 5.07218C14.937 5.11587 15.0468 5.12895 15.1533 5.10965C15.2586 5.09055 15.3559 5.04069 15.4328 4.96639L15.4785 4.92071C15.7106 4.68831 15.9863 4.50395 16.2898 4.37816C16.5932 4.25238 16.9184 4.18763 17.2469 4.18763C17.5754 4.18763 17.9007 4.25238 18.2041 4.37816C18.5075 4.50395 18.7832 4.68832 19.0153 4.92071C19.2474 5.15271 19.4316 5.42815 19.5572 5.73131C19.683 6.03475 19.7478 6.36 19.7478 6.68848C19.7478 7.01696 19.683 7.34222 19.5572 7.64565C19.4315 7.94895 19.2473 8.2245 19.015 8.45657C19.0149 8.45668 19.0151 8.45646 19.015 8.45657L18.969 8.50257C18.8947 8.57953 18.8449 8.6768 18.8258 8.78211C18.8065 8.88859 18.8195 8.9984 18.8632 9.0974C18.8867 9.15075 18.9045 9.20629 18.9164 9.26306C18.9559 9.32115 19.0064 9.3713 19.0655 9.41043C19.1532 9.46852 19.2559 9.4998 19.3611 9.50046H19.5007C20.1636 9.50046 20.7994 9.76381 21.2681 10.2326C21.7369 10.7013 22.0002 11.3371 22.0002 12C22.0002 12.6629 21.7369 13.2987 21.2681 13.7674C20.7994 14.2362 20.1636 14.4995 19.5007 14.4995H19.4278C19.3226 14.5002 19.2199 14.5315 19.1321 14.5896C19.0441 14.6479 18.975 14.7307 18.9334 14.8278L18.9299 14.836C18.8862 14.935 18.8731 15.0448 18.8924 15.1512C18.9115 15.2565 18.9614 15.3538 19.0357 15.4307L19.0813 15.4764C19.0812 15.4763 19.0815 15.4765 19.0813 15.4764C19.3136 15.7085 19.4982 15.9844 19.6239 16.2877C19.7497 16.5911 19.8144 16.9164 19.8144 17.2449C19.8144 17.5733 19.7497 17.8986 19.6239 18.202C19.4981 18.5055 19.3137 18.7811 19.0813 19.0133L18.4925 18.4238L19.082 19.0126C18.8499 19.245 18.5742 19.4294 18.2708 19.5552C17.9673 19.681 17.6421 19.7457 17.3136 19.7457C16.9851 19.7457 16.6598 19.681 16.3564 19.5552C16.0531 19.4295 15.7776 19.2452 15.5455 19.013C15.5454 19.0129 15.5456 19.0131 15.5455 19.013L15.4995 18.9669C15.4225 18.8927 15.3253 18.8428 15.2199 18.8237C15.1135 18.8044 15.0037 18.8174 14.9047 18.8611L14.8965 18.8647C14.7994 18.9063 14.7166 18.9754 14.6583 19.0634C14.6002 19.1511 14.5689 19.2539 14.5683 19.3591V19.4986C14.5683 20.1615 14.3049 20.7973 13.8362 21.2661C13.3674 21.7348 12.7316 21.9982 12.0687 21.9982C11.4058 21.9982 10.77 21.7348 10.3013 21.2661C9.83252 20.7973 9.56918 20.1615 9.56918 19.4986V19.4356C9.56522 19.3296 9.53024 19.2271 9.46848 19.1407C9.40526 19.0523 9.31691 18.985 9.21492 18.9475C9.19845 18.9414 9.18217 18.9349 9.16611 18.9278C9.06712 18.8841 8.9573 18.871 8.85083 18.8904C8.74551 18.9095 8.64824 18.9593 8.57128 19.0336L8.52562 19.0793C8.52551 19.0794 8.52573 19.0792 8.52562 19.0793C8.29354 19.3115 8.01767 19.4961 7.71437 19.6218C7.41093 19.7476 7.08567 19.8124 6.75719 19.8124C6.42872 19.8124 6.10346 19.7476 5.80002 19.6218C5.49687 19.4962 5.22143 19.312 4.98943 19.0799C4.75703 18.8478 4.57266 18.5721 4.44688 18.2687C4.32109 17.9653 4.25635 17.64 4.25635 17.3115C4.25635 16.983 4.32109 16.6578 4.44688 16.3543C4.57266 16.0509 4.75703 15.7752 4.98943 15.5431L5.0351 15.4974C5.1094 15.4205 5.15927 15.3232 5.17836 15.2179C5.19767 15.1114 5.18463 15.0016 5.14094 14.9026L5.13733 14.8944C5.09573 14.7973 5.02669 14.7145 4.93863 14.6562C4.85091 14.5981 4.74819 14.5669 4.643 14.5662H4.50344C3.84053 14.5662 3.20476 14.3028 2.736 13.8341C2.26725 13.3653 2.00391 12.7296 2.00391 12.0667C2.00391 11.4037 2.26725 10.768 2.736 10.2992C3.20476 9.83046 3.84053 9.56712 4.50344 9.56712H4.56646C4.67244 9.56316 4.77499 9.52818 4.86134 9.46642C4.94973 9.4032 5.01705 9.31485 5.05456 9.21286C5.06062 9.19639 5.0672 9.18011 5.07429 9.16405C5.11798 9.06506 5.13101 8.95524 5.11171 8.84877C5.09261 8.74345 5.04274 8.64619 4.96844 8.56923L4.92277 8.52356C4.69037 8.29142 4.50601 8.01575 4.38022 7.71231C4.25444 7.40887 4.18969 7.08361 4.18969 6.75514C4.18969 6.42666 4.25444 6.1014 4.38022 5.79796C4.50595 5.49466 4.6902 5.21911 4.92245 4.98704C5.15452 4.7548 5.43007 4.57055 5.73337 4.44482C6.03681 4.31903 6.36206 4.25429 6.69054 4.25429C7.01902 4.25429 7.34428 4.31903 7.64771 4.44482C7.95115 4.57061 8.22682 4.75497 8.45896 4.98737L8.50463 5.03303C8.58159 5.10734 8.67886 5.1572 8.78417 5.1763C8.89065 5.19561 9.00046 5.18257 9.09946 5.13888C9.15281 5.11533 9.20835 5.09752 9.26512 5.08563C9.32321 5.0462 9.37336 4.99565 9.41249 4.93657C9.47058 4.84885 9.50186 4.74613 9.50252 4.64094V4.50138C9.50252 3.83847 9.76587 3.2027 10.2346 2.73394ZM12.0021 10.3336C11.0818 10.3336 10.3357 11.0797 10.3357 12C10.3357 12.9203 11.0818 13.6664 12.0021 13.6664C12.9224 13.6664 13.6684 12.9203 13.6684 12C13.6684 11.0797 12.9224 10.3336 12.0021 10.3336ZM8.66934 12C8.66934 10.1594 10.1615 8.66728 12.0021 8.66728C13.8427 8.66728 15.3348 10.1594 15.3348 12C15.3348 13.8406 13.8427 15.3327 12.0021 15.3327C10.1615 15.3327 8.66934 13.8406 8.66934 12Z"
+                      fill="#0B2330"
+                    />
+                  </svg>
+                </a>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-outline-dark dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    GBP
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="section-p-y">
+      <div class="d-flex flex-lg-row flex-column">
+        <div class="flex-1 ps-8">
+          <h1 class="headline">
+            <span
+              data-aos="custom-fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="30"
+              >Buy & sell Crypto in</span
+            >
+            
+            <span
+              data-aos="custom-fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              >minutes</span
+            >
+          </h1>
+          <p data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">
+            Lightning-fast execution, advanced charts, and secure
+            trading—redefining your trading experience.
+          </p>
+
+          <div
+            class="hero-actions"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <a
+              href=""
+              class="btn btn-primary w-100"
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              Join now
+            </a>
+
+            <div class="position-relative my-4">
+              <hr />
+              <p
+                class="small bg-brand text-muted position-absolute top-50 start-50 translate-middle px-2"
+              >
+                Or continue with
+              </p>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-center">
+              <a href="#" class="btn btn-light border mb-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="32"
+                  viewBox="0 0 33 32"
+                  fill="none"
+                >
+                  <path
+                    d="M29.5743 13.388H28.5003V13.3327H16.5003V18.666H24.0357C22.9363 21.7707 19.9823 23.9993 16.5003 23.9993C12.0823 23.9993 8.50033 20.4173 8.50033 15.9993C8.50033 11.5813 12.0823 7.99935 16.5003 7.99935C18.5397 7.99935 20.395 8.76868 21.8077 10.0253L25.579 6.25402C23.1977 4.03468 20.0123 2.66602 16.5003 2.66602C9.13699 2.66602 3.16699 8.63602 3.16699 15.9993C3.16699 23.3627 9.13699 29.3327 16.5003 29.3327C23.8637 29.3327 29.8337 23.3627 29.8337 15.9993C29.8337 15.1053 29.7417 14.2327 29.5743 13.388Z"
+                    fill="#FFC107"
+                  />
+                  <path
+                    d="M4.70433 9.79335L9.08499 13.006C10.2703 10.0713 13.141 7.99935 16.5003 7.99935C18.5397 7.99935 20.395 8.76868 21.8077 10.0253L25.579 6.25402C23.1977 4.03468 20.0123 2.66602 16.5003 2.66602C11.379 2.66602 6.93766 5.55735 4.70433 9.79335Z"
+                    fill="#FF3D00"
+                  />
+                  <path
+                    d="M16.4999 29.3338C19.9439 29.3338 23.0732 28.0158 25.4392 25.8725L21.3125 22.3805C19.9291 23.4332 18.2383 24.0023 16.4999 24.0005C13.0319 24.0005 10.0872 21.7891 8.97788 18.7031L4.62988 22.0531C6.83655 26.3711 11.3179 29.3338 16.4999 29.3338Z"
+                    fill="#4CAF50"
+                  />
+                  <path
+                    d="M29.574 13.3893H28.5V13.334H16.5V18.6673H24.0353C23.5095 20.1449 22.5622 21.4361 21.3107 22.3813L21.3127 22.38L25.4393 25.872C25.1473 26.1373 29.8333 22.6673 29.8333 16.0007C29.8333 15.1067 29.7413 14.234 29.574 13.3893Z"
+                    fill="#1976D2"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="btn btn-light border mb-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="32"
+                  viewBox="0 0 33 32"
+                  fill="none"
+                >
+                  <path
+                    d="M23.9825 28.2662C22.5306 29.6737 20.9454 29.4514 19.4195 28.7848C17.8047 28.1033 16.3232 28.0736 14.6195 28.7848C12.4861 29.7033 11.3602 29.4366 10.0861 28.2662C2.85639 20.8143 3.92307 9.46607 12.1305 9.05125C14.1306 9.15496 15.5232 10.1476 16.6935 10.2364C18.4417 9.88089 20.1158 8.85866 21.9825 8.992C24.2195 9.16977 25.9084 10.0587 27.0196 11.6587C22.3973 14.4291 23.4936 20.518 27.7307 22.2217C26.8862 24.444 25.7899 26.6514 23.9677 28.281L23.9825 28.2662ZM16.5454 8.96237C16.3232 5.65863 19.0047 2.93268 22.0862 2.66602C22.5158 6.48827 18.6195 9.33274 16.5454 8.96237Z"
+                    fill="black"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1">
+          <picture>
+            <source media="(min-width:650px)" srcset="img/hero.png" />
+            <source media="(min-width:465px)" srcset="img/hero.png" />
+            <img
+              src="img/hero.png"
+              alt="hero trade image"
+              class="img-fluid"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-p-y">
+      <div class="container">
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-12">
+            <div class="text-center mb-8">
+              <h2>Trade Anywhere</h2>
+              <p>Trade BTC, LTC and ETH cryptocurrencies in minutes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-12">
+            <div class="card">
+              <div class="table-responsive">
+                <table class="table table-full table-hover">
+                  <thead>
+                    <tr>
+                      <th class="font-regular">Asset</th>
+                      <th class="font-regular">Last price</th>
+                      <th class="font-regular">24hr Change</th>
+                      <th class="font-regular">Market Cap</th>
+                      <th class="font-regular"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        <img
+                          width="32"
+                          height="32"
+                          src="img/icons/Bitcoin.svg"
+                          alt="bitcoin"
+                        />
+                        <span> Bitcoin</span>
+                      </th>
+                      <td>3.5123 <span> BTC </span></td>
+                      <td><span> +2.15% </span></td>
+                      <td>$215.7B</td>
+                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <img
+                          width="32"
+                          height="32"
+                          src="img/icons/Ethereum.svg"
+                          alt="bitcoin"
+                        />
+                        <span> Ethereum </span>
+                      </th>
+                      <td>14.1256 <span> ETH </span></td>
+                      <td><span> -0.78% </span></td>
+                      <td>$105.3B</td>
+                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <img
+                          width="32"
+                          height="32"
+                          src="img/icons/Solana.svg"
+                          alt="bitcoin"
+                        />
+                        <span> Solana </span>
+                      </th>
+                      <td>98.43 <span> SOL </span></td>
+                      <td><span> +2.15% </span></td>
+                      <td>$45.9B</td>
+                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <img
+                          width="32"
+                          height="32"
+                          src="img/icons/Dogecoin.svg"
+                          alt="bitcoin"
+                        />
+                        <span> Dogecoin </span>
+                      </th>
+                      <td>1,203.67 <span> DOGE </span></td>
+                      <td><span> -1.15% </span></td>
+                      <td>$19.7B</td>
+                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <img
+                          width="32"
+                          height="32"
+                          src="img/icons/Binance.svg"
+                          alt="bitcoin"
+                        />
+                        <span> Binance Coin </span>
+                      </th>
+                      <td>7.452 <span> BNB </span></td>
+                      <td><span> +3.94% </span></td>
+                      <td>$67.8B</td>
+                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="text-center">
+                        <div class="d-flex justify-content-center gap-2">
+                          <div class="d-flex">
+                            <span>
+                              <img
+                                width="24"
+                                height="24"
+                                src="img/icons/Bitcoin.svg"
+                                alt=""
+                              />
+                            </span>
+                            <span class="ms-n2">
+                              <img
+                                width="24"
+                                height="24"
+                                src="img/icons/Ethereum.svg"
+                                alt=""
+                              />
+                            </span>
+                            <span class="ms-n2">
+                              <img
+                                width="24"
+                                height="24"
+                                src="img/icons/Dogecoin.svg"
+                                alt=""
+                              />
+                            </span>
+                            <span class="ms-n2">
+                              <img
+                                width="24"
+                                height="24"
+                                src="img/icons/Solana.svg"
+                                alt=""
+                              />
+                            </span>
+                          </div>
+                          <span> View all markets </span>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="24"
+                            viewBox="0 0 25 24"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.97 5.46934C14.1106 5.32889 14.3012 5.25 14.5 5.25C14.6988 5.25 14.8894 5.32889 15.03 5.46934L21.03 11.4693C21.1705 11.61 21.2493 11.8006 21.2493 11.9993C21.2493 12.1981 21.1705 12.3887 21.03 12.5293L15.03 18.5293C14.9613 18.603 14.8785 18.6621 14.7865 18.7031C14.6945 18.7441 14.5952 18.7662 14.4945 18.7679C14.3938 18.7697 14.2938 18.7512 14.2004 18.7135C14.107 18.6757 14.0222 18.6196 13.951 18.5484C13.8797 18.4772 13.8236 18.3923 13.7859 18.2989C13.7482 18.2055 13.7296 18.1055 13.7314 18.0048C13.7332 17.9041 13.7552 17.8048 13.7962 17.7128C13.8372 17.6208 13.8963 17.538 13.97 17.4693L18.69 12.7493H4.5C4.30109 12.7493 4.11032 12.6703 3.96967 12.5297C3.82902 12.389 3.75 12.1983 3.75 11.9993C3.75 11.8004 3.82902 11.6097 3.96967 11.469C4.11032 11.3284 4.30109 11.2493 4.5 11.2493H18.69L13.97 6.52934C13.8295 6.38871 13.7507 6.19809 13.7507 5.99934C13.7507 5.80059 13.8295 5.60997 13.97 5.46934Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-p-y">
+      <div class="container">
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-12">
+            <div class="text-center mb-8">
+              <h2>Why OneXchange?</h2>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-4">
+            <div class="card why-card">
+              <div class="text-center mb-3">
+                <img width="92" height="100" src="img/security.svg" alt="" />
+              </div>
+              <div class="content text-center">
+                <h4>Security</h4>
+                <p>
+                  Advanced encryption, firewalls, and real-time threat
+                  monitoring.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card why-card">
+              <div class="text-center mb-3">
+                <img width="142" height="100" src="img/speed.svg" alt="" />
+              </div>
+              <div class="content text-center">
+                <h4>Speed</h4>
+                <p>
+                  Fast transactions, quick execution, and smooth navigation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card why-card">
+              <div class="text-center mb-3">
+                <img width="78" height="100" src="img/support.svg" alt="" />
+              </div>
+              <div class="content text-center">
+                <h4>Support</h4>
+                <p>24/7 expert help via chat, email, or knowledge base.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-p-y">
+      <div class="container">
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-12">
+            <div class="text-center mb-8">
+              <h2>Buy, sell and trade crypto with confidence</h2>
+              <p>
+                Access a secure, intuitive platform designed to help you buy,
+                sell, and manage crypto with ease and speed.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bentoBox"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="card trade-execution">
+            <div class="card-header">
+              <h4>Instant Trade Execution</h4>
+              <p class="body-3">
+                Buy or sell crypto in seconds with lightning-fast order
+                processing and zero delays.
+              </p>
+            </div>
+
+            <div class="card-body">
+              <div class="d-flex flex-column">
+                <img
+                  width="312"
+                  src="img/instant-trade.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <img
+                  width="312"
+                  src="img/instant-trade-2.svg"
+                  class="img-fluid mx-auto"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card market-insights">
+            <div class="card-header">
+              <h4>Real-Time Market Insights</h4>
+              <p class="body-3">
+                Advanced encryption, firewalls, and real-time threat monitoring.
+              </p>
+            </div>
+
+            <div class="card-body">
+              <div class="text-center">
+                <img
+                  width="447"
+                  src="img/real-time-insight.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card portfolio-tracker">
+            <div class="card-header">
+              <h4>Portfolio Tracker</h4>
+              <p class="body-3">
+                Monitor your holdings and performance across multiple assets—all
+                in one clean dashboard.
+              </p>
+            </div>
+
+            <div class="card-body">
+              <div class="d-flex flex-column">
+                <img src="img/portfolio-tracker.svg" class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="card transaction-records">
+            <div class="card-header">
+              <h4>Transparent Transaction Records</h4>
+              <p class="body-3">
+                View detailed logs of your crypto activity with timestamps and
+                security markers.
+              </p>
+            </div>
+
+            <div class="card-body px-0">
+              <div class="">
+                <img
+                  src="img/transparent-transaction.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card secure-wallet">
+            <div class="card-header">
+              <h4 class="text-white">Secure Wallet</h4>
+              <p class="text-white body-3">
+                Your assets are protected with end-to-end encryption,
+                multi-signature support, and cold storage.
+              </p>
+            </div>
+
+            <div class="card-body px-0">
+              <div class="text-center">
+                <img
+                  width="180"
+                  src="img/secure-wallet.svg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-p-y">
+      <div class="container">
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-12">
+            <div class="text-center mb-8">
+              <h2>Trade Anywhere</h2>
+              <p>Trade BTC, LTC and ETH cryptocurrencies in minutes.</p>
+
+              <picture>
+                <source
+                  media="(min-width:650px)"
+                  srcset="img/trade-anywhere.png"
+                />
+                <source
+                  media="(min-width:465px)"
+                  srcset="img/trade-anywhere.png"
+                />
+                <img
+                  src="img/trade-anywhere.png"
+                  alt="hero trade image"
+                  class="img-fluid"
+                  data-aos="fade-up"
+                  data-aos-duration="00"
+                  data-aos-delay="400"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner pt-5">
+      <div class="container">
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-6">
+            <div class="d-flex flex-column h-100 justify-content-center">
+              <h2>Trade anytime, anywhere</h2>
+              <p>
+                Get instant access to markets, portfolio insights, and real-time
+                alerts—right from your phone. Available on Android and iOS.
+              </p>
+
+              <div class="d-flex gap-3">
+                <a href="">
+                  <img src="/img/app-store.svg" alt="app store icon" />
+                </a>
+                <a href="">
+                  <img src="/img/google-play.svg" alt="google play icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="/img/banner-mock.svg"
+              alt="mobile mock"
+              class="img-fluid"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section-p-y bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="footer-top">
+              <!-- logo svg -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="72"
+                height="48"
+                viewBox="0 0 72 48"
+                fill="none"
+              >
+                <rect width="72" height="48" fill="url(#pattern0_1053_4511)" />
+                <defs>
+                  <pattern
+                    id="pattern0_1053_4511"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_1053_4511"
+                      transform="scale(0.00833333 0.0125)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_1053_4511"
+                    width="120"
+                    height="80"
+                    preserveAspectRatio="none"
+                    xlink:href="data:image/png;base64,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"
+                  />
+                </defs>
+              </svg>
+            </div>
+            <div class="footer-bottom d-flex gap-3 mt-3">
+                <a href="">
+                  <img src="/img/twitter.svg" />
+
+                </a>
+                <a href="">
+                  <img src="/img/fb.svg" />
+
+                </a>
+                <a href="">
+                  <img src="/img/insta.svg" />
+
+                </a>
+                <a href="">
+                  <img src="/img/linkedin.svg" />
+
+                </a>
+                
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="pb-3 text-capitalize"> About oneXchain </h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href=""> About </a>
+              </li>
+              <li>
+                <a href=""> Announcements </a>
+              </li>
+              <li>
+                <a href=""> Official Blog </a>
+              </li>
+              <li>
+                <a href=""> Privacy Terms </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="pb-3 text-capitalize"> Learn </h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href=""> Investor study report </a>
+              </li>
+              <li>
+                <a href=""> Online safety </a>
+              </li>
+              <li>
+                <a href=""> Bitcoin Halving </a>
+              </li>
+              <li>
+                <a href=""> Learn about crypto </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-2">
+            <h5 class="pb-3 text-capitalize"> Help </h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href=""> Support </a>
+              </li>
+              <li>
+                <a href=""> Complaints </a>
+              </li>
+              <li>
+                <a href=""> FAQs </a>
+              </li>
+              <li>
+                <a href=""> API</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="pb-3 text-capitalize"> Buy Crypto </h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href=""> Buy Coin Guide </a>
+              </li>
+              <li>
+                <a href=""> Crypto Price </a>
+              </li>
+              <li>
+                <a href=""> BTC Price </a>
+              </li>
+              <li>
+                <a href=""> ETH Price</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="pb-3 text-capitalize"> Get started </h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href=""> Login </a>
+              </li>
+              <li>
+                <a href=""> Signup </a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      window.addEventListener("load", AOS.refresh);
+      AOS.init({
+        once: true, // Animate only once
+        duration: 600,
+        easing: "ease-out",
+      });
+    </script>
+  </body>
+</html>
