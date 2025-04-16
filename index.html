@@ -89,12 +89,14 @@
               </li>
             </ul>
 
-            <div class="d-flex gap-4">
+            <div class="d-flex gap-5">
               <div class="d-flex gap-3">
-                <button class="btn btn-outline-dark" type="submit">
+                <button class="btn btn-outline-dark btn-sm" type="submit">
                   Login
                 </button>
-                <button class="btn btn-primary" type="submit">Register</button>
+                <button class="btn btn-primary btn-sm" type="submit">
+                  Register
+                </button>
               </div>
 
               <div class="d-flex gap-2 align-items-center">
@@ -145,7 +147,7 @@
                 </a>
                 <div class="dropdown">
                   <button
-                    class="btn btn-outline-dark dropdown-toggle"
+                    class="btn btn-outline-dark btn-sm dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -169,9 +171,9 @@
       </nav>
     </header>
 
-    <section class="section-p-y">
+    <section>
       <div class="d-flex flex-lg-row flex-column">
-        <div class="flex-1 ps-8">
+        <div class="flex-1 ps-8 pt-8">
           <h1 class="headline">
             <span
               data-aos="custom-fade-up"
@@ -179,7 +181,7 @@
               data-aos-delay="30"
               >Buy & sell Crypto in</span
             >
-            
+
             <span
               data-aos="custom-fade-up"
               data-aos-duration="1000"
@@ -187,13 +189,18 @@
               >minutes</span
             >
           </h1>
-          <p data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">
+          <p
+            class="mb-8"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             Lightning-fast execution, advanced charts, and secure
             trading—redefining your trading experience.
           </p>
 
           <div
-            class="hero-actions"
+            class="d-flex flex-column gap-4 hero-actions"
             data-aos="fade-in"
             data-aos-duration="1000"
             data-aos-delay="400"
@@ -208,7 +215,7 @@
               Join now
             </a>
 
-            <div class="position-relative my-4">
+            <div class="position-relative">
               <hr />
               <p
                 class="small bg-brand text-muted position-absolute top-50 start-50 translate-middle px-2"
@@ -217,8 +224,8 @@
               </p>
             </div>
 
-            <div class="d-flex gap-2 justify-content-center">
-              <a href="#" class="btn btn-light border mb-0">
+            <div class="d-flex gap-4 justify-content-center">
+              <a href="#" class="btn btn-light border mb-0 social-btn active-hover">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="33"
@@ -244,7 +251,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="btn btn-light border mb-0">
+              <a href="#" class="btn btn-light border mb-0 social-btn active-hover">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="33"
@@ -278,7 +285,7 @@
       </div>
     </section>
 
-    <section class="section-p-y">
+    <section>
       <div class="container">
         <div
           class="row"
@@ -287,7 +294,7 @@
           data-aos-delay="30"
         >
           <div class="col-md-12">
-            <div class="text-center mb-8">
+            <div class="text-center mb-10">
               <h2>Trade Anywhere</h2>
               <p>Trade BTC, LTC and ETH cryptocurrencies in minutes.</p>
             </div>
@@ -301,7 +308,7 @@
           data-aos-delay="30"
         >
           <div class="col-md-12">
-            <div class="card">
+            <div class="card shadow-1">
               <div class="table-responsive">
                 <table class="table table-full table-hover">
                   <thead>
@@ -315,7 +322,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <th>
+                      <td>
                         <img
                           width="32"
                           height="32"
@@ -323,14 +330,43 @@
                           alt="bitcoin"
                         />
                         <span> Bitcoin</span>
-                      </th>
-                      <td>3.5123 <span> BTC </span></td>
-                      <td><span> +2.15% </span></td>
+                      </td>
+                      <td>3.5123 <span class="text-muted"> BTC </span></td>
+                      <td>
+                        <span class="text-success"> +2.15% </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_1217_1822)">
+                            <path
+                              d="M19.6663 5L11.333 13.3333L7.16634 9.16667L1.33301 15M19.6663 5H13.833M19.6663 5V10.8333"
+                              stroke="#10B981"
+                              stroke-width="1.66667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1217_1822">
+                              <rect
+                                width="20"
+                                height="20"
+                                fill="white"
+                                transform="translate(0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </td>
                       <td>$215.7B</td>
-                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                      <td><a href="" class="btn btn-primary btn-sm"> Buy </a></td>
                     </tr>
                     <tr>
-                      <th>
+                      <td>
                         <img
                           width="32"
                           height="32"
@@ -338,14 +374,50 @@
                           alt="bitcoin"
                         />
                         <span> Ethereum </span>
-                      </th>
-                      <td>14.1256 <span> ETH </span></td>
-                      <td><span> -0.78% </span></td>
+                      </td>
+                      <td>14.1256 <span class="text-muted"> ETH </span></td>
+                      <td>
+                        <span class="text-danger"> -0.78% </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_1240_14459)">
+                            <path
+                              d="M14.0713 15.0001H19.7856V9.28577"
+                              stroke="#F44361"
+                              stroke-width="1.42857"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M19.7858 15L11.7144 6.92857C11.5808 6.79769 11.4013 6.72439 11.2144 6.72439C11.0274 6.72439 10.8479 6.79769 10.7144 6.92857L7.42864 10.2143C7.29512 10.3452 7.11561 10.4185 6.92864 10.4185C6.74168 10.4185 6.56216 10.3452 6.42864 10.2143L1.21436 5"
+                              stroke="#F44361"
+                              stroke-width="1.42857"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1240_14459">
+                              <rect
+                                width="20"
+                                height="20"
+                                fill="white"
+                                transform="translate(0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </td>
                       <td>$105.3B</td>
-                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                      <td><a href="" class="btn btn-primary btn-sm"> Buy </a></td>
                     </tr>
                     <tr>
-                      <th>
+                      <td>
                         <img
                           width="32"
                           height="32"
@@ -353,14 +425,43 @@
                           alt="bitcoin"
                         />
                         <span> Solana </span>
-                      </th>
-                      <td>98.43 <span> SOL </span></td>
-                      <td><span> +2.15% </span></td>
+                      </td>
+                      <td>98.43 <span class="text-muted"> SOL </span></td>
+                      <td>
+                        <span class="text-success"> +2.15% </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_1217_1822)">
+                            <path
+                              d="M19.6663 5L11.333 13.3333L7.16634 9.16667L1.33301 15M19.6663 5H13.833M19.6663 5V10.8333"
+                              stroke="#10B981"
+                              stroke-width="1.66667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1217_1822">
+                              <rect
+                                width="20"
+                                height="20"
+                                fill="white"
+                                transform="translate(0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </td>
                       <td>$45.9B</td>
-                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                      <td><a href="" class="btn btn-primary btn-sm"> Buy </a></td>
                     </tr>
                     <tr>
-                      <th>
+                      <td>
                         <img
                           width="32"
                           height="32"
@@ -368,14 +469,50 @@
                           alt="bitcoin"
                         />
                         <span> Dogecoin </span>
-                      </th>
-                      <td>1,203.67 <span> DOGE </span></td>
-                      <td><span> -1.15% </span></td>
+                      </td>
+                      <td>1,203.67 <span class="text-muted"> DOGE </span></td>
+                      <td>
+                        <span class="text-danger"> -1.15% </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_1240_14459)">
+                            <path
+                              d="M14.0713 15.0001H19.7856V9.28577"
+                              stroke="#F44361"
+                              stroke-width="1.42857"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M19.7858 15L11.7144 6.92857C11.5808 6.79769 11.4013 6.72439 11.2144 6.72439C11.0274 6.72439 10.8479 6.79769 10.7144 6.92857L7.42864 10.2143C7.29512 10.3452 7.11561 10.4185 6.92864 10.4185C6.74168 10.4185 6.56216 10.3452 6.42864 10.2143L1.21436 5"
+                              stroke="#F44361"
+                              stroke-width="1.42857"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1240_14459">
+                              <rect
+                                width="20"
+                                height="20"
+                                fill="white"
+                                transform="translate(0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </td>
                       <td>$19.7B</td>
-                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                      <td><a href="" class="btn btn-primary btn-sm"> Buy </a></td>
                     </tr>
                     <tr>
-                      <th>
+                      <td>
                         <img
                           width="32"
                           height="32"
@@ -383,15 +520,44 @@
                           alt="bitcoin"
                         />
                         <span> Binance Coin </span>
-                      </th>
-                      <td>7.452 <span> BNB </span></td>
-                      <td><span> +3.94% </span></td>
+                      </td>
+                      <td>7.452 <span class="text-muted"> BNB </span></td>
+                      <td>
+                        <span class="text-success"> +3.94% </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_1217_1822)">
+                            <path
+                              d="M19.6663 5L11.333 13.3333L7.16634 9.16667L1.33301 15M19.6663 5H13.833M19.6663 5V10.8333"
+                              stroke="#10B981"
+                              stroke-width="1.66667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1217_1822">
+                              <rect
+                                width="20"
+                                height="20"
+                                fill="white"
+                                transform="translate(0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </td>
                       <td>$67.8B</td>
-                      <td><a href="" class="btn btn-primary"> Buy </a></td>
+                      <td><a href="" class="btn btn-primary btn-sm"> Buy </a></td>
                     </tr>
                     <tr>
                       <td colspan="5" class="text-center">
-                        <div class="d-flex justify-content-center gap-2">
+                        <a href="" class="d-flex justify-content-center gap-2">
                           <div class="d-flex">
                             <span>
                               <img
@@ -442,7 +608,7 @@
                               fill="black"
                             />
                           </svg>
-                        </div>
+                        </a>
                       </td>
                     </tr>
                   </tbody>
@@ -454,7 +620,7 @@
       </div>
     </section>
 
-    <section class="section-p-y">
+    <section>
       <div class="container">
         <div
           class="row"
@@ -463,7 +629,7 @@
           data-aos-delay="30"
         >
           <div class="col-md-12">
-            <div class="text-center mb-8">
+            <div class="text-center mb-10">
               <h2>Why OneXchange?</h2>
             </div>
           </div>
@@ -476,7 +642,7 @@
         >
           <div class="col-md-4">
             <div class="card why-card">
-              <div class="text-center mb-3">
+              <div class="text-center mb-10">
                 <img width="92" height="100" src="img/security.svg" alt="" />
               </div>
               <div class="content text-center">
@@ -490,7 +656,7 @@
           </div>
           <div class="col-md-4">
             <div class="card why-card">
-              <div class="text-center mb-3">
+              <div class="text-center mb-10">
                 <img width="142" height="100" src="img/speed.svg" alt="" />
               </div>
               <div class="content text-center">
@@ -503,7 +669,7 @@
           </div>
           <div class="col-md-4">
             <div class="card why-card">
-              <div class="text-center mb-3">
+              <div class="text-center mb-10">
                 <img width="78" height="100" src="img/support.svg" alt="" />
               </div>
               <div class="content text-center">
@@ -516,7 +682,7 @@
       </div>
     </section>
 
-    <section class="section-p-y">
+    <section>
       <div class="container">
         <div
           class="row"
@@ -525,7 +691,7 @@
           data-aos-delay="30"
         >
           <div class="col-md-12">
-            <div class="text-center mb-8">
+            <div class="text-center mb-10">
               <h2>Buy, sell and trade crypto with confidence</h2>
               <p>
                 Access a secure, intuitive platform designed to help you buy,
@@ -550,7 +716,7 @@
               </p>
             </div>
 
-            <div class="card-body">
+            <div class="card-body py-0">
               <div class="d-flex flex-column">
                 <img
                   width="312"
@@ -575,7 +741,7 @@
               </p>
             </div>
 
-            <div class="card-body">
+            <div class="card-body py-0">
               <div class="text-center">
                 <img
                   width="447"
@@ -595,9 +761,13 @@
               </p>
             </div>
 
-            <div class="card-body">
+            <div class="card-body py-0">
               <div class="d-flex flex-column">
-                <img src="./img/portfolio-tracker.svg" class="img-fluid" alt="" />
+                <img
+                  src="./img/portfolio-tracker.svg"
+                  class="img-fluid"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -610,7 +780,7 @@
               </p>
             </div>
 
-            <div class="card-body px-0">
+            <div class="card-body py-0 px-0">
               <div class="">
                 <img
                   src="./img/transparent-transaction.svg"
@@ -629,7 +799,7 @@
               </p>
             </div>
 
-            <div class="card-body px-0">
+            <div class="card-body py-0 px-0">
               <div class="text-center">
                 <img
                   width="180"
@@ -644,7 +814,7 @@
       </div>
     </section>
 
-    <section class="section-p-y">
+    <section>
       <div class="container">
         <div
           class="row"
@@ -653,10 +823,21 @@
           data-aos-delay="30"
         >
           <div class="col-md-12">
-            <div class="text-center mb-8">
+            <div class="text-center mb-10">
               <h2>Trade Anywhere</h2>
               <p>Trade BTC, LTC and ETH cryptocurrencies in minutes.</p>
+            </div>
 
+            <div class="d-flex gap-3 justify-content-center mb-5">
+              <a href="" class="active-hover">
+                <img src="./img/App_Store_light.svg" alt="app store icon" />
+              </a>
+              <a href="" class="active-hover">
+                <img src="./img/Google_Play_light.svg" alt="google play icon" />
+              </a>
+            </div>
+
+            <div class="text-center">
               <picture>
                 <source
                   media="(min-width:650px)"
@@ -667,6 +848,7 @@
                   srcset="img/trade-anywhere.png"
                 />
                 <img
+                  width="960"
                   src="img/trade-anywhere.png"
                   alt="hero trade image"
                   class="img-fluid"
@@ -681,7 +863,121 @@
       </div>
     </section>
 
-    <section class="banner pt-5">
+    <section>
+      <div class="container">
+        <div
+          class="row"
+          data-aos="custom-fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="30"
+        >
+          <div class="col-md-7">
+            <div class="mb-10">
+                <h2>Get in Touch. Stay in Touch.</h2>
+                <p>
+                  Got a problem? Just get in touch. Our support team is available
+                  24/7.
+                </p>
+
+            </div>
+            <img
+              src="./img/rocket-launch.svg"
+              alt="rocket image"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="30"
+            />
+          </div>
+
+          <div class="col-md-5">
+            <div
+              class="d-flex flex-row p-4 border rounded-4 gap-4 mb-5 intouch-card"
+            >
+              <div class="iconBox">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.9804 5.53693C18.8926 5.51743 17.8117 5.71273 16.7995 6.11164C15.7874 6.51055 14.8639 7.10522 14.082 7.86159C13.3001 8.61796 12.6751 9.52115 12.2429 10.5194C11.8119 11.515 11.5811 12.5856 11.5635 13.6703V24.822C11.5635 25.4613 11.3095 26.0744 10.8573 26.5265C10.4052 26.9786 9.79194 27.2326 9.15251 27.2326H6.7415C5.78235 27.2326 4.86248 26.8516 4.18425 26.1735C3.50602 25.4954 3.125 24.5757 3.125 23.6167V18.7955C3.125 17.8365 3.50602 16.9167 4.18425 16.2386C4.86248 15.5605 5.78235 15.1795 6.7415 15.1795H9.15251V13.6609L9.15265 13.6427C9.17387 12.2379 9.47212 10.8511 10.0303 9.56183C10.5885 8.27252 11.3956 7.106 12.4055 6.12912C13.4154 5.15223 14.6081 4.38418 15.9154 3.86898C17.2159 3.35641 18.6044 3.10413 20.002 3.12635C21.3997 3.10413 22.7881 3.35641 24.0887 3.86898C25.3959 4.38418 26.5887 5.15223 27.5985 6.12912C28.6084 7.106 29.4155 8.27252 29.9737 9.56183C30.5319 10.8511 30.8302 12.2379 30.8514 13.6427L30.8515 13.6609L30.8515 15.1795H33.2625C34.2217 15.1795 35.1416 15.5605 35.8198 16.2386C36.498 16.9167 36.879 17.8365 36.879 18.7955V23.6167C36.879 24.5757 36.498 25.4954 35.8198 26.1735C35.1416 26.8516 34.2217 27.2326 33.2625 27.2326H30.8515L30.8515 27.8352C30.8515 29.4336 30.2165 30.9664 29.0861 32.0966C28.2079 32.9747 27.0866 33.5538 25.8803 33.7685C25.6886 34.4699 25.317 35.1163 24.7937 35.6394C24.0025 36.4305 22.9293 36.875 21.8103 36.875H18.1938C17.0748 36.875 16.0016 36.4305 15.2103 35.6394C14.419 34.8483 13.9745 33.7753 13.9745 32.6564C13.9745 31.5376 14.419 30.4646 15.2103 29.6735C16.0016 28.8823 17.0748 28.4379 18.1938 28.4379H21.8103C22.9293 28.4379 24.0025 28.8823 24.7937 29.6735C25.2592 30.1388 25.6046 30.7017 25.8102 31.3141C26.3988 31.1473 26.941 30.8323 27.3813 30.3921C28.0595 29.7139 28.4405 28.7942 28.4405 27.8352V13.6703C28.423 12.5857 28.1922 11.515 27.7611 10.5194C27.3289 9.52115 26.704 8.61796 25.9221 7.86159C25.1402 7.10522 24.2167 6.51055 23.2045 6.11164C22.1924 5.71273 21.1114 5.51743 20.0236 5.53693C20.0092 5.53719 19.9948 5.53719 19.9804 5.53693ZM30.8515 24.822H33.2625C33.5823 24.822 33.8889 24.695 34.115 24.4689C34.341 24.2429 34.468 23.9363 34.468 23.6167V18.7955C34.468 18.4758 34.341 18.1692 34.115 17.9432C33.8889 17.7171 33.5823 17.5902 33.2625 17.5902H30.8515V24.822ZM9.15251 17.5902H6.7415C6.42179 17.5902 6.11516 17.7171 5.88909 17.9432C5.66301 18.1692 5.536 18.4758 5.536 18.7955V23.6167C5.536 23.9363 5.66301 24.2429 5.88909 24.4689C6.11516 24.695 6.42179 24.822 6.7415 24.822H9.15251V17.5902ZM18.1938 30.8485C17.7142 30.8485 17.2543 31.039 16.9151 31.378C16.576 31.7171 16.3855 32.1769 16.3855 32.6564C16.3855 33.1359 16.576 33.5958 16.9151 33.9349C17.2543 34.2739 17.7142 34.4644 18.1938 34.4644H21.8103C22.2899 34.4644 22.7498 34.2739 23.0889 33.9349C23.428 33.5958 23.6185 33.1359 23.6185 32.6564C23.6185 32.1769 23.428 31.7171 23.0889 31.378C22.7498 31.039 22.2899 30.8485 21.8103 30.8485H18.1938Z"
+                    fill="#0B2330"
+                    stroke="#0B2330"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="content">
+                <h4>Security</h4>
+                <p>
+                  Got a problem? Just get in touch. Our support team is
+                  available 24/7.
+                </p>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-4 border rounded-4 gap-4 mb-5 intouch-card"
+            >
+              <div class="iconBox">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    d="M14.9375 18.3119C16.2725 18.3119 17.5776 17.9159 18.6876 17.1739C19.7976 16.432 20.6628 15.3774 21.1737 14.1435C21.6846 12.9097 21.8183 11.552 21.5578 10.2422C21.2974 8.93236 20.6545 7.7292 19.7105 6.78486C18.7665 5.84052 17.5637 5.19742 16.2544 4.93688C14.945 4.67633 13.5878 4.81005 12.3544 5.32113C11.121 5.8322 10.0668 6.69767 9.32508 7.80809C8.58338 8.91852 8.1875 10.224 8.1875 11.5595C8.1875 13.3504 8.89866 15.0679 10.1645 16.3342C11.4304 17.6005 13.1473 18.3119 14.9375 18.3119ZM14.9375 8.18333C15.605 8.18333 16.2575 8.38134 16.8125 8.75232C17.3676 9.1233 17.8001 9.65059 18.0556 10.2675C18.311 10.8844 18.3779 11.5633 18.2477 12.2182C18.1174 12.8731 17.796 13.4747 17.324 13.9468C16.852 14.419 16.2506 14.7406 15.5959 14.8708C14.9412 15.0011 14.2626 14.9343 13.6459 14.6787C13.0292 14.4232 12.5021 13.9904 12.1313 13.4352C11.7604 12.88 11.5625 12.2273 11.5625 11.5595C11.5625 10.6641 11.9181 9.80535 12.551 9.17219C13.1839 8.53903 14.0424 8.18333 14.9375 8.18333ZM28.4375 21.6881C29.4388 21.6881 30.4175 21.3911 31.2501 20.8346C32.0826 20.2781 32.7315 19.4872 33.1146 18.5618C33.4978 17.6365 33.5981 16.6182 33.4027 15.6358C33.2074 14.6534 32.7252 13.7511 32.0172 13.0428C31.3092 12.3346 30.4072 11.8522 29.4251 11.6568C28.4431 11.4614 27.4252 11.5617 26.5002 11.945C25.5751 12.3283 24.7845 12.9774 24.2282 13.8102C23.6719 14.6431 23.375 15.6222 23.375 16.6238C23.375 17.9669 23.9084 19.2551 24.8578 20.2048C25.8072 21.1545 27.0948 21.6881 28.4375 21.6881ZM28.4375 14.9357C28.7713 14.9357 29.0975 15.0347 29.375 15.2202C29.6525 15.4057 29.8688 15.6693 29.9965 15.9778C30.1243 16.2863 30.1577 16.6257 30.0926 16.9531C30.0275 17.2806 29.8667 17.5814 29.6307 17.8175C29.3947 18.0536 29.0941 18.2143 28.7667 18.2795C28.4394 18.3446 28.1001 18.3112 27.7917 18.1834C27.4834 18.0556 27.2198 17.8393 27.0344 17.5617C26.849 17.2841 26.75 16.9577 26.75 16.6238C26.75 16.1761 26.9278 15.7467 27.2443 15.4301C27.5607 15.1136 27.9899 14.9357 28.4375 14.9357ZM28.4375 23.3762C26.5675 23.3783 24.7511 24.0018 23.2737 25.1487C21.6209 23.5017 19.5175 22.3812 17.2288 21.9285C14.9402 21.4758 12.5688 21.7112 10.4137 22.605C8.2586 23.4987 6.41632 25.0108 5.11919 26.9506C3.82205 28.8904 3.12816 31.171 3.125 33.5048C3.125 33.9525 3.30279 34.3819 3.61926 34.6984C3.93572 35.015 4.36495 35.1929 4.8125 35.1929C5.26005 35.1929 5.68928 35.015 6.00574 34.6984C6.32221 34.3819 6.5 33.9525 6.5 33.5048C6.5 31.2662 7.38895 29.1194 8.97129 27.5365C10.5536 25.9536 12.6997 25.0643 14.9375 25.0643C17.1753 25.0643 19.3214 25.9536 20.9037 27.5365C22.4861 29.1194 23.375 31.2662 23.375 33.5048C23.375 33.9525 23.5528 34.3819 23.8693 34.6984C24.1857 35.015 24.6149 35.1929 25.0625 35.1929C25.5101 35.1929 25.9393 35.015 26.2557 34.6984C26.5722 34.3819 26.75 33.9525 26.75 33.5048C26.754 31.5271 26.2546 29.5809 25.2987 27.8497C26.0445 27.2601 26.9411 26.8926 27.8859 26.789C28.8307 26.6854 29.7856 26.8499 30.6413 27.2638C31.497 27.6777 32.2189 28.3243 32.7245 29.1294C33.23 29.9346 33.4988 30.8659 33.5 31.8167C33.5 32.2644 33.6778 32.6938 33.9943 33.0103C34.3107 33.3269 34.7399 33.5048 35.1875 33.5048C35.6351 33.5048 36.0643 33.3269 36.3807 33.0103C36.6972 32.6938 36.875 32.2644 36.875 31.8167C36.875 29.5781 35.9861 27.4313 34.4037 25.8484C32.8214 24.2655 30.6753 23.3762 28.4375 23.3762Z"
+                    fill="#0B2330"
+                  />
+                </svg>
+              </div>
+              <div class="content">
+                <h4>Community</h4>
+                <p>
+                  Got a problem? Just get in touch. Our support team is
+                  available 24/7.
+                </p>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-4 border rounded-4 gap-4 intouch-card"
+            >
+              <div class="iconBox">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16.637 7.33299C16.1891 7.33299 15.7595 7.51093 15.4427 7.82767C15.126 8.14441 14.9481 8.57401 14.9481 9.02194V10.7109H25.0818V9.02194C25.0818 8.57401 24.9038 8.14441 24.5871 7.82767C24.2704 7.51093 23.8408 7.33299 23.3928 7.33299H16.637ZM28.4597 10.7109V9.02194C28.4597 7.67813 27.9259 6.38935 26.9756 5.43913C26.0254 4.48891 24.7366 3.95508 23.3928 3.95508H16.637C15.2932 3.95508 14.0044 4.48891 13.0542 5.43913C12.104 6.38935 11.5701 7.67813 11.5701 9.02194V10.7109H8.19223C6.84842 10.7109 5.55964 11.2447 4.60942 12.1949C3.65919 13.1452 3.12537 14.4339 3.12537 15.7778V22.4972C3.12488 22.5206 3.12488 22.544 3.12537 22.5673V30.9784C3.12537 32.3222 3.65919 33.611 4.60942 34.5612C5.55964 35.5114 6.84841 36.0452 8.19223 36.0452H31.8376C33.1814 36.0452 34.4702 35.5114 35.4204 34.5612C36.3706 33.611 36.9045 32.3222 36.9045 30.9784V22.5673C36.905 22.544 36.905 22.5206 36.9045 22.4972V15.7778C36.9045 14.4339 36.3706 13.1452 35.4204 12.1949C34.4702 11.2447 33.1814 10.7109 31.8376 10.7109H28.4597ZM8.19223 14.0888C7.74429 14.0888 7.3147 14.2668 6.99796 14.5835C6.68122 14.9002 6.50328 15.3298 6.50328 15.7778V21.4748C10.7328 23.4382 15.3436 24.458 20.0149 24.458C24.6862 24.458 29.297 23.4382 33.5266 21.4748V15.7778C33.5266 15.3298 33.3486 14.9002 33.0319 14.5835C32.7151 14.2668 32.2855 14.0888 31.8376 14.0888H8.19223ZM33.5266 25.1615C29.2488 26.924 24.6589 27.8359 20.0149 27.8359C15.3709 27.8359 10.7811 26.924 6.50328 25.1615V30.9784C6.50328 31.4263 6.68122 31.8559 6.99796 32.1726C7.3147 32.4894 7.7443 32.6673 8.19223 32.6673H31.8376C32.2855 32.6673 32.7151 32.4894 33.0319 32.1726C33.3486 31.8559 33.5266 31.4263 33.5266 30.9784V25.1615ZM20.0149 19.1557C20.9477 19.1557 21.7039 19.9118 21.7039 20.8446V20.8615C21.7039 21.7943 20.9477 22.5505 20.0149 22.5505C19.0821 22.5505 18.326 21.7943 18.326 20.8615V20.8446C18.326 19.9118 19.0821 19.1557 20.0149 19.1557Z"
+                    fill="#0B2330"
+                  />
+                </svg>
+              </div>
+              <div class="content">
+                <h4>Careers</h4>
+                <p>
+                  Got a problem? Just get in touch. Our support team is
+                  available 24/7.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner pb-0">
       <div class="container">
         <div
           class="row"
@@ -698,12 +994,7 @@
               </p>
 
               <div class="d-flex gap-3">
-                <a href="">
-                  <img src="./img/app-store.svg" alt="app store icon" />
-                </a>
-                <a href="">
-                  <img src="./img/google-play.svg" alt="google play icon" />
-                </a>
+                <a href="" class="btn btn-outline-dark"> Register now </a>
               </div>
             </div>
           </div>
@@ -713,7 +1004,7 @@
               alt="mobile mock"
               class="img-fluid"
               data-aos="fade-up"
-              data-aos-duration="1000"
+              data-aos-duration="400"
               data-aos-delay="200"
             />
           </div>
@@ -721,7 +1012,7 @@
       </div>
     </section>
 
-    <footer class="section-p-y bg-white">
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-2">
@@ -759,28 +1050,23 @@
               </svg>
             </div>
             <div class="footer-bottom d-flex gap-3 mt-3">
-                <a href="">
-                  <img src="./img/twitter.svg" />
-
-                </a>
-                <a href="">
-                  <img src="./img/fb.svg" />
-
-                </a>
-                <a href="">
-                  <img src="./img/insta.svg" />
-
-                </a>
-                <a href="">
-                  <img src="./img/linkedin.svg" />
-
-                </a>
-                
+              <a href="">
+                <img src="./img/twitter.svg" />
+              </a>
+              <a href="">
+                <img src="./img/fb.svg" />
+              </a>
+              <a href="">
+                <img src="./img/insta.svg" />
+              </a>
+              <a href="">
+                <img src="./img/linkedin.svg" />
+              </a>
             </div>
           </div>
 
           <div class="col-md-2">
-            <h5 class="pb-3 text-capitalize"> About oneXchain </h5>
+            <h5 class="pb-3 text-capitalize">About oneXchain</h5>
             <ul class="list-unstyled footer-links">
               <li>
                 <a href=""> About </a>
@@ -797,7 +1083,7 @@
             </ul>
           </div>
           <div class="col-md-2">
-            <h5 class="pb-3 text-capitalize"> Learn </h5>
+            <h5 class="pb-3 text-capitalize">Learn</h5>
             <ul class="list-unstyled footer-links">
               <li>
                 <a href=""> Investor study report </a>
@@ -815,7 +1101,7 @@
           </div>
 
           <div class="col-md-2">
-            <h5 class="pb-3 text-capitalize"> Help </h5>
+            <h5 class="pb-3 text-capitalize">Help</h5>
             <ul class="list-unstyled footer-links">
               <li>
                 <a href=""> Support </a>
@@ -832,7 +1118,7 @@
             </ul>
           </div>
           <div class="col-md-2">
-            <h5 class="pb-3 text-capitalize"> Buy Crypto </h5>
+            <h5 class="pb-3 text-capitalize">Buy Crypto</h5>
             <ul class="list-unstyled footer-links">
               <li>
                 <a href=""> Buy Coin Guide </a>
@@ -849,7 +1135,7 @@
             </ul>
           </div>
           <div class="col-md-2">
-            <h5 class="pb-3 text-capitalize"> Get started </h5>
+            <h5 class="pb-3 text-capitalize">Get started</h5>
             <ul class="list-unstyled footer-links">
               <li>
                 <a href=""> Login </a>
@@ -857,7 +1143,6 @@
               <li>
                 <a href=""> Signup </a>
               </li>
-             
             </ul>
           </div>
         </div>

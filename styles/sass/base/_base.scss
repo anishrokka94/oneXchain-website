@@ -42,7 +42,8 @@ h1 {
 h2 {
   font-family: $brand-font-semibold!important;
   font-size:$brand-heading-md;
-  line-height: 32px;
+  line-height: 48px;
+  margin-bottom: 16px;
 }
 
 // h3 {
@@ -55,6 +56,7 @@ h4 {
   font-family: $brand-font-medium!important;
   font-size:$brand-heading-xs;
   line-height: 22px;
+  margin-bottom: 16px;
 }
 
 h5 {
@@ -65,7 +67,9 @@ h5 {
 
 p {
   font-family: $brand-font-light;
-  line-height: 32px;
+  line-height: 24px;
+  font-size: 16px;
+  color: #454B4F;
 }
 
 .bg-brand {
@@ -76,7 +80,18 @@ p {
   box-shadow: $shadow-1;
 }
 
+section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background: #fff;
+
+  h2 + p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+ 
+}
 .section-p-y {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }

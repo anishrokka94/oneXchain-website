@@ -1,15 +1,34 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+.headline {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 24px;
+
+  + p {
+    font-size: 18px;
+  }
+
+}
+
+
 .hero-actions {
     @media (min-width: 767px) {
         width: 392px;
     }
 }
 
+.social-btn {
+  padding: 12px;
+}
+
 .why-card {
     padding: 68px 16px;
-    background: #FCF7F2;
+    background: #F7F7F7;
     position: relative;
     border-radius: 12px;
 
@@ -22,6 +41,13 @@
         background-clip: padding-box, border-box;
         background-origin: padding-box, border-box;
        
+        }
+
+        &:hover {
+          h4 {
+
+            color: #E1B000;
+          }
         }
     }
 
@@ -48,7 +74,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto auto;
-    gap: 1.5rem;
+    gap: 2rem;
     position: relative;
     overflow: hidden;
 
@@ -84,17 +110,17 @@
 
   .market-insights {
     grid-column: span 3;
-    background: #FCF7F2;
+    background: #F7F7F7;
   }
 
   .portfolio-tracker {
     grid-column: span 2;
-    background: #FCF7F2;
+    background: #F7F7F7;
   }
 
   .transaction-records {
     grid-column: span 2;
-    background: #FCF7F2;
+    background: #F7F7F7;
   }
 
   .secure-wallet {
@@ -102,10 +128,26 @@
     background: #212B30;
   }
 
+  .intouch-card {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background: #F7F7F7;
+    
+
+  h4 {
+    color: #E1B000;
+  }
+  
+ 
+  }
+  }
+
   
   .banner {
     background: linear-gradient(90deg,rgba(254, 241, 195, 1) 10%, rgba(254, 223, 46, 1) 100%);
   }
+
 
   footer {
     .footer-links {
