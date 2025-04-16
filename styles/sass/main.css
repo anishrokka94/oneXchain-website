@@ -13164,27 +13164,27 @@ section h2 + p, section .h2 + p {
 
 @font-face {
   font-family: "Lexend Regular";
-  src: url("./../../../fonts/Lexend/static/Lexend-Regular.ttf") format("truetype");
+  src: url("./../../fonts/Lexend/static/Lexend-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lexend Light";
-  src: url("./../../../fonts/Lexend/static/Lexend-Light.ttf") format("truetype");
+  src: url("./../../fonts/Lexend/static/Lexend-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lexend Medium";
-  src: url("./../../../fonts/Lexend/static/Lexend-Medium.ttf") format("truetype");
+  src: url("./../../fonts/Lexend/static/Lexend-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lexend SemiBold";
-  src: url("./../../../fonts/Lexend/static/Lexend-SemiBold.ttf") format("truetype");
+  src: url("./../../fonts/Lexend/static/Lexend-SemiBold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lexend Bold";
-  src: url("./../../../fonts/Lexend/static/Lexend-Bold.ttf") format("truetype");
+  src: url("./../../fonts/Lexend/static/Lexend-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lexend Bold";
-  src: url("./../../../fonts/Lexend/static/Lexend-ExtraBold.ttf") format("truetype");
+  src: url("./../../fonts/Lexend/static/Lexend-ExtraBold.ttf") format("truetype");
 }
 /**
  * Basic typography style for copy text
