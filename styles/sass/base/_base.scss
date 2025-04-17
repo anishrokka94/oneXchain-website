@@ -37,6 +37,11 @@ h1 {
   font-family: $brand-font-semibold!important;
   font-size:$brand-heading-lg;
   line-height: 60px;
+
+  @media (max-width: 767px) {
+    font-size:$brand-heading-md;
+    line-height: 54px;
+  }
 }
 
 h2 {
@@ -44,6 +49,11 @@ h2 {
   font-size:$brand-heading-md;
   line-height: 48px;
   margin-bottom: 16px;
+
+  @media (max-width: 767px) {
+    font-size:$brand-heading-sm;
+    line-height: 32px;
+  }
 }
 
 // h3 {
@@ -57,6 +67,11 @@ h4 {
   font-size:$brand-heading-xs;
   line-height: 22px;
   margin-bottom: 16px;
+
+  @media (max-width: 767px) {
+    font-size:$base-font;
+    line-height: 18px;
+  }
 }
 
 h5 {
@@ -85,9 +100,19 @@ section {
   padding-bottom: 64px;
   background: #fff;
 
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   h2 + p {
     font-size: 18px;
     line-height: 32px;
+
+    @media (max-width: 767px) {
+      font-size:$base-font-sm;
+      line-height: 22px;
+    }
   }
  
 }

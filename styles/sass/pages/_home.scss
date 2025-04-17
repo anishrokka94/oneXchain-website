@@ -3,7 +3,6 @@
 // -----------------------------------------------------------------------------
 
 .headline {
-
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -12,14 +11,16 @@
   + p {
     font-size: 18px;
   }
-
 }
 
 
+
 .hero-actions {
-    @media (min-width: 767px) {
-        width: 392px;
-    }
+  width: 392px;
+  @media (max-width: 767px) {
+    width: 300px;
+    margin-bottom: 16px;
+  }
 }
 
 .social-btn {
@@ -27,33 +28,34 @@
 }
 
 .why-card {
-    padding: 68px 16px;
-    background: #F7F7F7;
-    position: relative;
-    border-radius: 12px;
+  padding: 68px 16px;
+  background: #f7f7f7;
+  position: relative;
+  border-radius: 12px;
+  @media (max-width: 767px) {
+    margin-bottom: 16px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
-    &.card {
-        
-        transition: transform 0.3s ease-in-out;
-        cursor: pointer;
-        &:hover {
-            transform: translateY(-4px);
-        background-clip: padding-box, border-box;
-        background-origin: padding-box, border-box;
-       
-        }
-
-        &:hover {
-          h4 {
-
-            color: #E1B000;
-          }
-        }
+  &.card {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-4px);
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
     }
 
+    &:hover {
+      h4 {
+        color: #e1b000;
+      }
+    }
+  }
 
-    .bg-img{
-        height: 100%;
+  .bg-img {
+    height: 100%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -63,103 +65,122 @@
     position: absolute;
     width: 100%;
     z-index: -1;
-    }
-    
+  }
 }
 
-
-
-
 .bentoBox {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto auto;
-    gap: 2rem;
-    position: relative;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
 
-    .card {
-        border-radius: 16px;
-        transition: transform 0.3s ease-in-out;
-        cursor: pointer;
-
-        .card-header {
-            padding: 24px;
-
-        }
-
-        &:hover {
-            transform: translateY(-4px);
-        background-clip: padding-box, border-box;
-        background-origin: padding-box, border-box;
-        
-       
-        }
-        
-    }
-
-  
-  }
-
-  /* Layout placement */
-  .trade-execution {
-    grid-column: span 3;
-    background: #FEF1C3;
-    background: linear-gradient(90deg,rgba(254, 241, 195, 1) 10%, rgba(254, 223, 46, 1) 100%);
-  }
-
-  .market-insights {
-    grid-column: span 3;
-    background: #F7F7F7;
-  }
-
-  .portfolio-tracker {
-    grid-column: span 2;
-    background: #F7F7F7;
-  }
-
-  .transaction-records {
-    grid-column: span 2;
-    background: #F7F7F7;
-  }
-
-  .secure-wallet {
-    grid-column: span 2;
-    background: #212B30;
-  }
-
-  .intouch-card {
+  .card {
+    border-radius: 16px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+
+    .card-header {
+      padding: 24px;
+    }
+
     &:hover {
-      background: #F7F7F7;
-    
-
-  h4 {
-    color: #E1B000;
-  }
-  
- 
-  }
-  }
-
-  
-  .banner {
-    background: linear-gradient(90deg,rgba(254, 241, 195, 1) 10%, rgba(254, 223, 46, 1) 100%);
-  }
-
-
-  footer {
-    .footer-links {
-        li {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        a {
-            font-family: $brand-font-light;
-            font-size: 14px;
-            color: #5E626B;
-
-        }
+      transform: translateY(-4px);
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
     }
   }
+}
+
+/* Layout placement */
+.trade-execution {
+  grid-column: span 3;
+  background: #fef1c3;
+  background: linear-gradient(
+    to bottom,
+    rgba(253, 243, 150, 1) 0%,
+    rgba(251, 216, 80, 1) 100%
+  );
+}
+
+.market-insights {
+  grid-column: span 3;
+  background: #f7f7f7;
+}
+
+.portfolio-tracker {
+  grid-column: span 2;
+  background: #f7f7f7;
+}
+
+.transaction-records {
+  grid-column: span 2;
+  background: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+  .bentoBox {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+
+  .bentoBox .card {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  /* Optional reset for image sizing */
+  .bentoBox img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.secure-wallet {
+  grid-column: span 2;
+  background: #212b30;
+
+  p {
+    color: #cccfd1;
+  }
+}
+
+.intouch-card {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background: #f7f7f7;
+
+    h4 {
+      color: #e1b000;
+    }
+  }
+
+  @media (max-width: 979px) {
+    margin-top: 16px;
+  }
+}
+
+.banner {
+  background: linear-gradient(
+    to bottom,
+    rgba(253, 243, 150, 1) 0%,
+    rgba(251, 216, 80, 1) 100%
+  );
+}
+
+footer {
+  .footer-links {
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    a {
+      font-family: $brand-font-light;
+      font-size: 14px;
+      color: #5e626b;
+    }
+  }
+}

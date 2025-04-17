@@ -13111,6 +13111,12 @@ h1, .h1 {
   font-size: 56px;
   line-height: 60px;
 }
+@media (max-width: 767px) {
+  h1, .h1 {
+    font-size: 40px;
+    line-height: 54px;
+  }
+}
 
 h2, .h2 {
   font-family: "Lexend SemiBold" !important;
@@ -13118,12 +13124,24 @@ h2, .h2 {
   line-height: 48px;
   margin-bottom: 16px;
 }
+@media (max-width: 767px) {
+  h2, .h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
 
 h4, .h4 {
   font-family: "Lexend Medium" !important;
   font-size: 20px;
   line-height: 22px;
   margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  h4, .h4 {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 h5, .h5 {
@@ -13152,9 +13170,21 @@ section {
   padding-bottom: 64px;
   background: #fff;
 }
+@media (max-width: 767px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 section h2 + p, section .h2 + p {
   font-size: 18px;
   line-height: 32px;
+}
+@media (max-width: 767px) {
+  section h2 + p, section .h2 + p {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .section-p-y {
@@ -13275,9 +13305,13 @@ footer .footer-links a:hover {
   font-size: 18px;
 }
 
-@media (min-width: 767px) {
+.hero-actions {
+  width: 392px;
+}
+@media (max-width: 767px) {
   .hero-actions {
-    width: 392px;
+    width: 300px;
+    margin-bottom: 16px;
   }
 }
 
@@ -13287,9 +13321,16 @@ footer .footer-links a:hover {
 
 .why-card {
   padding: 68px 16px;
-  background: #F7F7F7;
+  background: #f7f7f7;
   position: relative;
   border-radius: 12px;
+}
+@media (max-width: 767px) {
+  .why-card {
+    margin-bottom: 16px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 .why-card.card {
   transition: transform 0.3s ease-in-out;
@@ -13301,7 +13342,7 @@ footer .footer-links a:hover {
   background-origin: padding-box, border-box;
 }
 .why-card.card:hover h4, .why-card.card:hover .h4 {
-  color: #E1B000;
+  color: #e1b000;
 }
 .why-card .bg-img {
   height: 100%;
@@ -13341,28 +13382,47 @@ footer .footer-links a:hover {
 /* Layout placement */
 .trade-execution {
   grid-column: span 3;
-  background: #FEF1C3;
-  background: linear-gradient(90deg, rgb(254, 241, 195) 10%, rgb(254, 223, 46) 100%);
+  background: #fef1c3;
+  background: linear-gradient(to bottom, rgb(253, 243, 150) 0%, rgb(251, 216, 80) 100%);
 }
 
 .market-insights {
   grid-column: span 3;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 .portfolio-tracker {
   grid-column: span 2;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 .transaction-records {
   grid-column: span 2;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
+@media (max-width: 768px) {
+  .bentoBox {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+  .bentoBox .card {
+    grid-column: span 1;
+    width: 100%;
+  }
+  /* Optional reset for image sizing */
+  .bentoBox img {
+    width: 100%;
+    height: auto;
+  }
+}
 .secure-wallet {
   grid-column: span 2;
-  background: #212B30;
+  background: #212b30;
+}
+.secure-wallet p {
+  color: #cccfd1;
 }
 
 .intouch-card {
@@ -13370,14 +13430,19 @@ footer .footer-links a:hover {
   cursor: pointer;
 }
 .intouch-card:hover {
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 .intouch-card:hover h4, .intouch-card:hover .h4 {
-  color: #E1B000;
+  color: #e1b000;
+}
+@media (max-width: 979px) {
+  .intouch-card {
+    margin-top: 16px;
+  }
 }
 
 .banner {
-  background: linear-gradient(90deg, rgb(254, 241, 195) 10%, rgb(254, 223, 46) 100%);
+  background: linear-gradient(to bottom, rgb(253, 243, 150) 0%, rgb(251, 216, 80) 100%);
 }
 
 footer .footer-links li {
@@ -13387,7 +13452,7 @@ footer .footer-links li {
 footer .footer-links a {
   font-family: "Lexend Light";
   font-size: 14px;
-  color: #5E626B;
+  color: #5e626b;
 }
 
 .login__body {
